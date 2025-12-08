@@ -1,0 +1,28 @@
+{
+  "name": "final_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^7.2.6"
+  },
+  "dependencies": {
+    "@jspsych/plugin-html-button-response": "^2.1.0",
+    "@jspsych/plugin-html-keyboard-response": "^2.1.0",
+    "@jspsych/plugin-image-button-response": "^2.2.0",
+    "@jspsych/plugin-survey-multi-choice": "^2.1.0",
+    "@jspsych/plugin-survey-text": "^2.1.0",
+    "@kurokida/jspsych-psychophysics": "^4.1.0",
+    "jspsych": "^8.2.2",
+    "pixi.js": "^8.14.3"
+  }
+}
