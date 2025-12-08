@@ -148,10 +148,10 @@ var condition = Math.random(); // if condition < 0.5 - Cond-1 else Cond-2.
         }
     ],
     timeline_variables: [
-        { img: '/Deploy-Expra-App/images/Bus_image_1.png', position: 1 },
-        { img: '/Deploy-Expra-App/images/Bus_image_2.png', position: 2 },
-        { img: '/Deploy-Expra-App/images/Bus_image_3.png', position: 3 },
-        { img: '/Deploy-Expra-App/images/Bus_image_4.png', position: 4 },
+        { img: './Deploy-Expra-App/images/Bus_image_1.png', position: 1 },
+        { img: './Deploy-Expra-App/images/Bus_image_2.png', position: 2 },
+        { img: './Deploy-Expra-App/images/Bus_image_3.png', position: 3 },
+        { img: './Deploy-Expra-App/images/Bus_image_4.png', position: 4 },
     ],
     randomize_order: true,
         }

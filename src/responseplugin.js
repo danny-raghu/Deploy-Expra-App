@@ -94,15 +94,15 @@ export var JsPsychResponseTask = (function (jspsych) {
                 });
 
         const assetsToLoad = [
-                                 '/Deploy-Expra-App/images/Bus.png',
-                                 '/Deploy-Expra-App/images/Jumping_down.png',
+                                 './Deploy-Expra-App/images/Bus.png',
+                                 './Deploy-Expra-App/images/Jumping_down.png',
                               ];
 
         Assets.load(assetsToLoad).then((loadedAssets) => {
                   // This function runs only after ALL assets are fully loaded
                   // You can access assets in the returned object using their full URL as the key
-                  const bus_texture = loadedAssets['/Deploy-Expra-App/images/Bus.png'];
-                  const jump_texture = loadedAssets['/Deploy-Expra-App/images/Jumping_down.png'];
+                  const bus_texture = loadedAssets['./Deploy-Expra-App/images/Bus.png'];
+                  const jump_texture = loadedAssets['./Deploy-Expra-App/images/Jumping_down.png'];
                   
         
                   const bus = new Sprite(bus_texture);

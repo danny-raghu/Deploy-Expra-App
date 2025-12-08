@@ -56,19 +56,19 @@ export var JsPsychCoinTask = (function (jspsych) {
                 });
 
         const assetsToLoad = [
-                                 '/Deploy-Expra-App/images/bg001.png',
-                                  '/Deploy-Expra-App/images/chest.png',
-                                  '/Deploy-Expra-App/images/Coin.png',
-                                  '/Deploy-Expra-App/images/magnet_rotated.png'
+                                 './Deploy-Expra-App/images/bg001.png',
+                                  './Deploy-Expra-App/images/chest.png',
+                                  './Deploy-Expra-App/images/Coin.png',
+                                  './Deploy-Expra-App/images/magnet_rotated.png'
                               ];
 
         Assets.load(assetsToLoad).then((loadedAssets) => {
           // This function runs only after ALL assets are fully loaded
           // You can access assets in the returned object using their full URL as the key
-          const bg_texture = loadedAssets['/Deploy-Expra-App/images/bg001.png'];
-          const collector_texture = loadedAssets['/Deploy-Expra-App/images/chest.png'];
-          const coin_texture = loadedAssets['/Deploy-Expra-App/images/Coin.png'];
-          const magnet_texture = loadedAssets['/Deploy-Expra-App/images/magnet_rotated.png'];
+          const bg_texture = loadedAssets['./Deploy-Expra-App/images/bg001.png'];
+          const collector_texture = loadedAssets['./Deploy-Expra-App/images/chest.png'];
+          const coin_texture = loadedAssets['./Deploy-Expra-App/images/Coin.png'];
+          const magnet_texture = loadedAssets['./Deploy-Expra-App/images/magnet_rotated.png'];
 
           const bg = new Sprite(bg_texture);
           const collector = new Sprite(collector_texture);
