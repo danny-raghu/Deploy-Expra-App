@@ -16,13 +16,13 @@ export var JsPsychResponseTask = (function (jspsych) {
       },
     },
     data: {
-      /** Provide a clear description of the data1 that could be used as documentation. We will eventually use these comments to automatically build documentation and produce metadata. */
-      data1: {
+      /* x-coordinate of the jumping person where the participant estimates the jumper will land relative to the bus*/
+      response_position: {
         type: ParameterType.FLOAT,
       },
-      /** Provide a clear description of the data2 that could be used as documentation. We will eventually use these comments to automatically build documentation and produce metadata. */
-      data2: {
-        type: ParameterType.STRING,
+      /** x-coordinate of the yellow marker, which is the correct response to the straight-up-and-down task */
+      correct_position: {
+        type: ParameterType.FLOAT,
       },
     },
   };
@@ -117,33 +117,38 @@ export var JsPsychResponseTask = (function (jspsych) {
                   bus.x = stageWidth/2 - bus.width/2;
                   bus.y = stageHeight/2 - bus.height/2;
 
+                  //Marker co-ordinate variables
+                  var marker_x = bus.x;
+                  var marker_y = bus.y;
+
                   //Position the jumper according to the presentation_trial's image
                   if(trial.jump_position == 1){
-                    jump.x = bus.x + 0.05*bus.width;
+                    marker_x = bus.x + 0.05*bus.width + jump.width/2;
                   }else if(trial.jump_position == 2){
-                    jump.x = bus.x + 0.25*bus.width;
+                    marker_x = bus.x + 0.25*bus.width + jump.width/2;
                   }else if(trial.jump_position == 3){
-                    jump.x = bus.x + 0.35*bus.width;
+                    marker_x = bus.x + 0.35*bus.width + jump.width/2;
                   }else if(trial.jump_position == 4){
-                    jump.x = bus.x + 0.65*bus.width;
+                    marker_x = bus.x + 0.65*bus.width + jump.width/2;
                   }
 
                   jump.y = bus.y;
+                  jump.x = bus.x + Math.random()*bus.width;
+                  marker_y = jump.y + jump.height;
 
                   app.stage.addChild(bus);
                   app.stage.addChild(jump);
 
                   const marker = new Graphics()
-                                  .rect(jump.x + jump.width/2, jump.y + jump.height, 5, 5)
+                                  .rect(marker_x, marker_y, 5, 5)
                                   .fill({
                                     color: 0xffea00,
                                     alpha: 1
                                   });
                   app.stage.addChild(marker);
 
-                  var data1 = jump.x - bus.x; 
-                  console.log(`Jumper Position rel to Bus before keypress: ${data1}`);
-                  console.log(typeof data1); 
+                  var data1 = jump.x + jump.width/2; //Getting data of the jumper's exact (middle position of the image) x-coordinate 
+                  console.log(`Jumper Position before keypress and marker: ${[data1,marker_x]}`);
 
                             
                    //Add the stuff relevant for response task.
@@ -206,14 +211,14 @@ export var JsPsychResponseTask = (function (jspsych) {
                   function submitData() { 
                     console.log('Submit Button clicked!'); 
                     app.destroy(true, true);   
-                    end_trial(data1);                 
+                    end_trial(data1, marker_x);                 
                   }
 
-                  const end_trial = (data1) => {
+                  const end_trial = (data1,marker_x) => {
                 // save data
                 var trial_data = {
-                                          data1: data1, // Make sure this type and name matches the information for data1 in the data object contained within the info const.
-                                          data2: "hello world!", // Make sure this type and name matches the information for data2 in the data object contained within the info const.
+                                          response_position: data1, // Make sure this type and name matches the information for data1 in the data object contained within the info const.
+                                          correct_position: marker_x, // Make sure this type and name matches the information for data2 in the data object contained within the info const.
                                       };
 
                 display_element.innerHTML = '';

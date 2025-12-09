@@ -34,24 +34,23 @@ var condition = Math.random(); // if condition < 0.5 - Cond-1 else Cond-2.
       type: htmlButtonResponse,
       stimulus: `<p><strong>Inhalt des Experiments:</strong></p> 
 
-      <p> Willkommen zu unserem Experiment über intuitive Physik. 
+      <p>Willkommen zu unserem Experiment über intuitive Physik. 
       Wir danken Ihnen für Ihr Interesse und Ihre Bereitschaft, an unserer Studie 
       teilzunehmen. </p>
 
       <p>Nehmen Sie nur an der Studie teil, wenn Sie mindestens 18 Jahre alt sind und 
       fließende Deutschkenntnisse besitzen.</p>
 
-      <p>Bitte machen Sie nur weiter, wenn Sie an einem <strong>Laptop</strong> oder <strong>Computer</strong> teilnehmen.</p>
+      <p>Bitte machen Sie nur weiter, wenn Sie an einem <b>Laptop</b> oder <b>Computer</b> teilnehmen.</p
 
       <p>Beantworten Sie die folgenden Fragen bitte in einem Durchgang und versuchen Sie 
-      dies in einer ruhigen, ungestörten Umgebung zu tun. 
-      Das Experiment dauert etwa 15 Minuten und wird bei einer Teilnahme über SONA 
-      mit 0,25 CP vergütet.</p>
+      dies in einer ruhigen, ungestörten Umgebung zu tun. Das Experiment dauert etwa 15 
+      Minuten und wird bei einer Teilnahme über SONA mit 0,25 CP vergütet.</p>
 
       <p>Bitte sprechen Sie nicht mit anderen über das Experiment oder die Ihnen 
       gezeigte Aufgabe.</p>
 
-      <p>Drücken Sie eine beliebige Taste, um fortzufahren.</p>
+      <p>Klicken Sie auf “Weiter”, um fortzufahren.</p>
       `,
       choices: ['Weiter'],
       post_trial_gap: 500
@@ -61,26 +60,26 @@ var condition = Math.random(); // if condition < 0.5 - Cond-1 else Cond-2.
 /* define data policy trial */
     var data_policy = {
       type: htmlButtonResponse,
-      stimulus: `<p><strong>Datenschutz:</strong></p> 
-      <p><strong>Freiwilligkeit & Rücktritt​</strong></p>
+      stimulus: `<p><b>Datenschutz:</b></p> 
+        <p><b>Freiwilligkeit & Rücktritt​</b></p>
       <p>Die Teilnahme ist freiwillig. 
       Sie können Ihre Teilnahme jederzeit und ohne Angabe von Gründen beenden, 
       ohne dass Ihnen daraus Nachteile entstehen. Bereits erhobene Daten werden in 
       diesem Fall nicht weiterverwendet. Eine Löschung der Daten nach Zustimmung und 
       Durchführung des Experiments ist aufgrund der anonymen Erhebung nicht möglich.​</p>
 
-        <p><strong>Datenschutz</strong> </p> 
+        <p><b>Datenschutz</b> </p> 
       <p> Ihre Angaben werden streng vertraulich behandelt. 
       Die Daten werden ausschließlich in anonymisierter Form gespeichert und ausgewertet, 
       sodass kein Rückschluss auf Ihre Person möglich ist. Nur die Studienleitung hat 
-      Zugriff auf die Rohdaten.​ </p>
+      Zugriff auf die Rohdaten.​</p>
 
-        <p><strong>Ablauf und Dauer​</strong> </p>
-        <p>Die Beantwortung des Fragebogens dauert ca. 15 Minuten. 
-        Bitte bearbeiten Sie das folgende Experiment am Stück und achten Sie auf eine 
-        Vermeidung von äußeren Ablenkungen.</p>
+        <p><b>Ablauf und Dauer​</b> </p>
+      <p>Die Beantwortung des Fragebogens dauert ca. 15 Minuten. 
+      Bitte bearbeiten Sie das folgende Experiment am Stück und achten Sie auf eine 
+      Vermeidung von äußeren Ablenkungen.</p>
 
-      <p>Indem Sie auf “weiter” klicken, stimmen Sie der Datenschutzerklärung zu.</p>
+      <p>Indem Sie auf “Weiter” klicken, stimmen Sie der Datenschutzerklärung zu.</p>
       `,
       choices: ['Weiter'],
       post_trial_gap: 500
@@ -90,31 +89,38 @@ var condition = Math.random(); // if condition < 0.5 - Cond-1 else Cond-2.
 /* define instructions trial */
     var instructions = {
       type: htmlButtonResponse,
-      stimulus: `<p><strong>Anweisungen</strong></p> 
+      stimulus: `<p><b>Anweisungen</b></p> 
 
       <p>Im nächsten Schritt sehen Sie vier leicht unterschiedliche Bilder. </p>
 
-      <p>Zu Beginn sehen Sie ein statisches Bild einer Person, die auf dem Bus steht. 
+      <p>Zu Beginn sehen Sie ein statisches Bild einer Person, die auf einem Bus steht. 
       Bitte versuchen Sie, sich in die gegebene Position und Situation der Person auf dem 
-      Bildschirm zu versetzen. </p>
+      Bildschirm zu versetzen.  </p>
 
       <p>Die Person, die auf dem Bus steht, springt senkrecht, circa 30 cm in die Höhe 
-      (30 cm = circa die Länge von Ellenbogen bis Fingerspitzen), während der Bus mit einer
-       konstanten Geschwindigkeit von 30 km/h fährt. </p>
+      (30 cm = circa die Länge von Ellenbogen bis Handgelenk), während der Bus mit einer 
+      konstanten Geschwindigkeit von 30 km/h fährt.</p>
 
-      <p><strong>Bitte ignorieren Sie den Luftwiderstand</strong>  und versuchen Sie, die 
-      folgende Frage richtig zu beantworten. </p>
+      <p><b>Bitte ignorieren Sie den möglichen Luftwiderstand</b> und versuchen Sie, 
+      die folgende Frage richtig zu beantworten.</p>
 
-      <p>Wo werden Sie nach dem Sprung auf dem<strong> Dach des Busses</strong> landen? 
-      Schätzen Sie Ihre Landeposition in Bezug auf den <strong>Bus</strong> ein
+      <p>Wo werden Sie nach Absprung auf dem <b>Dach des Busses</b> landen? 
+      Schätzen Sie Ihre Landeposition in Bezug auf den <b>Bus</b> ein. </p>
 
-      <p><i>Bitte benutzen Sie den Schieberegler, um Ihre Antwort zu geben, indem Sie die 
-      springende Person an die Stelle bewegen, an der Sie <strong>nach</strong> dem 
-      Sprung landen würden, also Ihre geschätzte Landeposition.</i></p>
+      <p>Nach der Präsentation des statischen Bilds sehen Sie erneut den Bus, 
+      sowie die Person. Der gelbe Punkt markiert hierbei die ursprüngliche Position 
+      der Person vor dem Absprung. Bewegen Sie die springende Figur an die von Ihnen 
+      geschätzte Landeposition. Bitte benutzen Sie die <b>Pfeiltasten</b> auf ihrer Tastatur, 
+      um Ihre Antwort zu geben. Sobald die Figur auf der gewünschten Landeposition 
+      platziert wurde, klicken Sie auf “Einreichen”. </p>
+
+      <p>Danach können Sie Ihre Antwort nicht mehr verändern. 
+      Nutzen Sie nicht die “Zurück”-Taste Ihres Browsers, da sonst ihre Antwort 
+      gelöscht wird.</p>
       
       <p>Das Einzige, was sich bei den verschiedenen Versuchen ändert, ist Ihre 
-      Startposition auf dem Bus bevor Sie abspringen. <i>Zwischen den einzelnen Versuchen 
-      wird ein schwarzer Bildschirm eingeblendet.</i> </p>     
+      Startposition auf dem Bus, bevor Sie abspringen. Zwischen den einzelnen Versuchen 
+      wird ein Fixationskreuz eingeblendet. </p>     
       `,
       choices: ['Weiter'],
       post_trial_gap: 500
@@ -159,28 +165,28 @@ var condition = Math.random(); // if condition < 0.5 - Cond-1 else Cond-2.
 /* define instructions trial for priming task */
     var priming_instructions = {
       type: htmlButtonResponse,
-      stimulus: `<p><strong>Anweisungen:</strong></p> 
+      stimulus: `<p><b>Anweisungen:</b></p> 
 
       <p>Auf der nächsten Seite sehen Sie eine Landschaft, über der ein Förderband 
-      (die horizontale Linie) gespannt wurde. An diesem Förderband ist ein Magnet 
-      befestigt, an dessen Ende sich eine Münze befindet. Das Förderband bewegt sich 
-      mit einer konstanten Geschwindigkeit (etwa 30 km/h), sodass die Münze und der Magnet 
-      mit dieser Geschwindigkeit mitgeführt werden. </p>
+      (die horizontale Linie) gespannt wurde. An diesem Förderband ist ein Magnet befestigt, 
+      an dessen Ende sich eine Münze befindet. Das Förderband bewegt sich mit einer 
+      konstanten Geschwindigkeit (etwa 30 km/h), sodass die Münze und der Magnet mit dieser 
+      Geschwindigkeit mitgeführt werden.</p>
 
-      <p>Unter dem Förderband steht eine Schatzbox, in die die Münze fallen soll. </p>
+      <p>Unter dem Förderband steht eine Schatzbox, in die die Münze fallen soll.</p>
 
-      <p>Sobald Sie die Leertaste drücken, wird die Münze losgelassen, während sich der 
-      Magnet weiterhin vorwärts bewegt.</p>
+      <p>Sobald Sie die Leertaste drücken, wird die Münze losgelassen, 
+      während sich der Magnet weiterhin vorwärts bewegt.</p>
 
       <p>Sie haben 4 Versuche.</p>
 
       <p>Sobald Sie die Leertaste drücken, wird die Münze freigegeben. 
       Ihre Aufgabe besteht darin, so viele Münzen wie möglich zu sammeln, 
       indem Sie die Münze im richtigen Moment loslassen, damit sie in der Schatzbox landet. 
-      Nutzen Sie das Feedback nach jedem Versuch, um den Zeitpunkt des Loslassens besser zu 
-      kalibrieren.</p>
+      Nutzen Sie das Feedback nach jedem Versuch, um den Zeitpunkt des Loslassens besser 
+      zu kalibrieren.</p>
       
-      <p>Klicken Sie auf „Weiter“, um fortzufahren.</p>     
+      <p>Bitte drücken Sie “Weiter”, um fortzufahren.</p>     
       `,
       choices: ['Weiter'],
       post_trial_gap: 500
@@ -213,6 +219,45 @@ if(condition < 0.5){
   timeline.push(priming_instructions, coin_task_procedure, instructions, present_response_procedure);
 }
 
+/*Define Demographics Trials */
+
+    // Trial for gender (multiple choice)
+    var gender_question_trial = {
+      type: SurveyMultiChoicePlugin,
+      questions: [
+        {
+          prompt: "Was ist Ihr Geschlecht?",
+          options: ['Männlich', 'Weiblich', 'Divers', 'Keine Angabe'],
+          name: 'Geschlecht',
+          required: true
+        }
+      ],
+      preamble: '<h3>Demografische Informationen</h3><p>Bitte beantworten Sie die folgenden Fragen.</p>'
+    };
+    timeline.push(gender_question_trial);
+
+    //Trial for age and study course (text)
+    var age_study_question_trial = {
+        type: SurveyTextPlugin,
+        questions: [
+                    {
+                      prompt: "Wie alt sind Sie?",
+                      name: 'Alter', // Use a 'name' to easily identify the data in results
+                      placeholder: "Zahl eingeben",
+                      required: true
+                    },
+                    {
+                      prompt: "Welchen Studiengang oder Beruf üben Sie aus?",
+                      name: 'Studienfach oder Beruf ', // Use a 'name' to easily identify the data in results
+                      placeholder: "selbstausfüllen ",
+                      required: true
+                    }
+                  ],
+  preamble: '<h3>Demografische Informationen</h3><p>Bitte beantworten Sie die folgenden Fragen.</p>'
+};
+
+    timeline.push(age_study_question_trial);
+
 /*Define Briefing trial */
 
     var briefing_instructions = {
@@ -243,44 +288,6 @@ if(condition < 0.5){
     };
     timeline.push(briefing_instructions);
 
-/*Define Demographics Trials */
-
-    // Trial for gender (multiple choice)
-    var gender_question_trial = {
-      type: SurveyMultiChoicePlugin,
-      questions: [
-        {
-          prompt: "Was ist Ihr Geschlecht?",
-          options: ['Männlich', 'Weiblich', 'Divers', 'Keine Angabe'],
-          name: 'Geschlecht',
-          required: true
-        }
-      ],
-      preamble: '<h3>Demografische Informationen</h3><p>Bitte beantworten Sie die folgenden Fragen.</p>'
-    };
-    timeline.push(gender_question_trial);
-
-    //Trial for age and study course (text)
-    var age_study_question_trial = {
-        type: SurveyTextPlugin,
-        questions: [
-                    {
-                      prompt: "Wie alt sind Sie?",
-                      name: 'Alter', // Use a 'name' to easily identify the data in results
-                      placeholder: "Zahl eingeben",
-                      required: true
-                    },
-                    {
-                      prompt: "Welchen Studiengang belegen Sie?",
-                      name: 'Studiengang', // Use a 'name' to easily identify the data in results
-                      placeholder: "Studiengang eingeben",
-                      required: true
-                    }
-                  ],
-  preamble: '<h3>Demografische Informationen</h3><p>Bitte beantworten Sie die folgenden Fragen.</p>'
-};
-
-timeline.push(age_study_question_trial);
 
 jsPsych.run(timeline);
 
