@@ -56,19 +56,19 @@ export var JsPsychCoinTask = (function (jspsych) {
                 });
 
         const assetsToLoad = [
-                                 './public/images/bg001.png',
-                                  './public/images/chest.png',
-                                  './public/images/Coin.png',
-                                  './public/images/magnet_rotated.png'
+                                 './images/bg001.png',
+                                  './images/chest.png',
+                                  './images/Coin.png',
+                                  './images/magnet_rotated.png'
                               ];
 
         Assets.load(assetsToLoad).then((loadedAssets) => {
           // This function runs only after ALL assets are fully loaded
           // You can access assets in the returned object using their full URL as the key
-          const bg_texture = loadedAssets['./public/images/bg001.png'];
-          const collector_texture = loadedAssets['./public/images/chest.png'];
-          const coin_texture = loadedAssets['./public/images/Coin.png'];
-          const magnet_texture = loadedAssets['./public/images/magnet_rotated.png'];
+          const bg_texture = loadedAssets['./images/bg001.png'];
+          const collector_texture = loadedAssets['./images/chest.png'];
+          const coin_texture = loadedAssets['./images/Coin.png'];
+          const magnet_texture = loadedAssets['./images/magnet_rotated.png'];
 
           const bg = new Sprite(bg_texture);
           const collector = new Sprite(collector_texture);

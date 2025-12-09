@@ -154,10 +154,10 @@ var condition = Math.random(); // if condition < 0.5 - Cond-1 else Cond-2.
         }
     ],
     timeline_variables: [
-        { img: './public/images/Bus_image_1.png', position: 1 },
-        { img: './public/images/Bus_image_2.png', position: 2 },
-        { img: './public/images/Bus_image_3.png', position: 3 },
-        { img: './public/images/Bus_image_4.png', position: 4 },
+        { img: './images/Bus_image_1.png', position: 1 },
+        { img: './images/Bus_image_2.png', position: 2 },
+        { img: './images/Bus_image_3.png', position: 3 },
+        { img: './images/Bus_image_4.png', position: 4 },
     ],
     randomize_order: true,
         }
